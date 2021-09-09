@@ -22,7 +22,6 @@ form {
 }
 
 #tweet-text {
-  position: relative;
   background-color: rgb(175, 203, 255, 95);
   border-top-style: hidden;
   border-right-style: hidden;
@@ -31,10 +30,9 @@ form {
 }
 
 label {
-  position: absolute;
 }
 
-label, textarea{
+textarea{
   border-bottom: solid black 2px;
 }
 

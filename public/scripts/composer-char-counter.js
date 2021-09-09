@@ -8,8 +8,9 @@ $(document).ready(function() {
   // --- our code goes here ---
   $('#tweet-text').bind("keypress ", function()  {
     let tweetLength = (this.value).length + 1;
-    console.log(140 - tweetLength)
-    console.log(this)
+    let remainingLetters = 140 - tweetLength
+
+    $(this).parent().find('div').find('output').html(remainingLetters)
   })
 
 });
