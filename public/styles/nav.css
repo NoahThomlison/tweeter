@@ -1,0 +1,24 @@
+nav {
+  height: 120px;
+  width: 100%;
+  background-color: #4056A1;
+  color: #ffff;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.nav_stacked {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+nav{
+  z-index: -1;
+}
