@@ -6,11 +6,22 @@
 
 $(document).ready(function() {
   // --- our code goes here ---
-  $('#tweet-text').bind("keypress ", function()  {
-    let tweetLength = (this.value).length + 1;
-    let remainingLetters = 140 - tweetLength
+  $('#tweet-text').bind("input", function()  {
+    let tweetLength = (this.value).length;
+    const maxTweetLength = 140
 
-    $(this).parent().find('div').find('output').html(remainingLetters)
+    let remainingLetters = maxTweetLength - tweetLength
+
+    //update the html for the current count for the letters by finding the parent item of 'this' and then finding the 'output' of that parent and changing its .html
+    $(this).parent().find('.bottomRow').find('.counter').html(remainingLetters)
+
+    //if the tweetLenght is greater than the predefined limit then find the parent item of 'this' and then find the 'output' of that parent and change its .css
+    if(tweetLength >  maxTweetLength){
+      $(this).parent().find('.bottomRow').find('.counter').css("color", "red")
+    }
+    else{
+      $(this).parent().find('.bottomRow').find('.counter').css("color", "rba(84, 81, 73)")
+    }
   })
-
 });
+
