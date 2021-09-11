@@ -10,6 +10,8 @@ nav {
   align-content: center;
   justify-content: space-between;
   flex-wrap: wrap;
+  position: sticky;
+  top: 0;
 }
 
 .nav_stacked {
@@ -17,8 +19,4 @@ nav {
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
-}
-
-nav{
-  z-index: -1;
 }

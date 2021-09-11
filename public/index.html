@@ -27,10 +27,12 @@
     
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js'></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
   </head>
+
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
@@ -68,37 +70,46 @@
         <textarea name="text" id="tweet-text"></textarea>
         <div class='bottomRow'>
           <button type="submit">Tweet</button>
-          <output name="counter" class="counter" for="tweet-text">140</output>
+          <output class="counter" name="counter" for="tweet-text">140</output>
         </div>
       </form>
     </section>
+    <!-- End of New Tweet Box -->
 
-  <!-- Old Tweet Area -->
-  <section>
-    <article class="oldTweets">
-      <header>
-        <div class='user'>
-          <div class='userPicandUsername'>
-            <img src="/images/profile-hex.png" class='tweetProfile'>
-            <p>Test User</p>
+    <!-- Old Tweet Area -->
+    <section>
+      <article class="oldTweets">
+        <header>
+          <div class='user'>
+            <div class='userPicandUsername'>
+              <img class='tweetProfile' src="/images/profile-hex.png">
+              <p>Test User</p>
+            </div>
+            <div class='userEmailHandle'>
+              <p>@TestUser</p>
+            </div>
           </div>
-          <div class='userEmailHandle'>
-            <p>@TestUser</p>
+        </header>
+        <p class='oldTweetText'>Lorem ipsum dolor sit amet, consectetur   adipiscing elit. Nullam vitae   est   eu mi cursus condimentum. Cras  laoreet dui eros, at dictum tellus.</p>
+        <footer class="oldTweetsFooter">
+          <p class='ageOfTweet'>10 days ago</p>
+          <div class="iconContainer">
+            <i class="fas fa-flag"></i>
+            <i class="fas fa-retweet"></i>
+            <i class="fas fa-heart"></i>
           </div>
-        </div>
-      </header>
-      <p class='oldTweetText'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae   est   eu mi cursus condimentum. Cras laoreet dui eros, at dictum tellus.</p>
-      <footer class="oldTweetsFooter">
-        <p>10 days ago</p>
-        <div class="iconContainer">
-          <i class="fas fa-flag"></i>
-          <i class="fas fa-retweet"></i>
-          <i class="fas fa-heart"></i>
-        </div>
-      </footer>
-    </article>
-  </section>
-
+        </footer>
+      </article>
+    </section>
+    <!-- End Old Tweet Area -->
+  
   <script type="text/javascript" src="scripts\composer-char-counter.js"></script>
+  <script type="text/javascript" src="scripts\tweet-time-ago.js"></script>
+
   </body>
 </html>
+
+
+
+
+
