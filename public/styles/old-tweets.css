@@ -1,0 +1,34 @@
+.oldTweets{
+  margin: 10px;
+  border: #545149 solid 5px;
+  padding: 25px;
+}
+
+.tweetProfile{
+  width: 50%;
+  padding: 5px;
+  width: 150px;
+}
+
+.user{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.userPicandUsername{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.oldTweetText{
+  border-bottom: #545149 solid 5px;
+}
+
+.oldTweetsFooter{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

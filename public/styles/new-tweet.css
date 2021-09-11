@@ -27,6 +27,7 @@ form {
   border-right-style: hidden;
   border-left-style: hidden;
   margin-bottom: .5em;
+  outline: none;
 }
 
 label {
