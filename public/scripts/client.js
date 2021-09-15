@@ -48,6 +48,16 @@ const loadTweets = () => {
 $("#newTweetForm").submit(function(event) {
   const formInfo = $(this).serialize()
   event.preventDefault();
+
+  if(formInfo.slice(5) === "") {
+    console.log('ding')
+    alert("Your tweet is empty");
+    return
+  }
+  else if(($('.counter').val() <= 0)){
+    alert("Your tweet is too long");
+    return
+  }
   $.ajax("/tweets", { method: 'post', data: formInfo});
 });  
 
