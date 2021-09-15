@@ -30,7 +30,6 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js'></script>
 
     <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
   </head>
 
   <body>
@@ -59,52 +58,34 @@
     <main class="container">
       <h1>Main Tweet Title</h1>
       <h2>Some other tweet stuff</h2>
-      <p>taotnaotnaotnaotn aonraonf naofnao</p>
+      <p></p>
     </main>
 
     <!-- New Tweet Box -->
     <section class="new-tweet">
       <h2>Compose Tweet</h2>
-      <form method="POST" action="/tweets/">
+      <!-- <form method="POST" action="/tweets/"> -->
+      <form id='newTweetForm' method="POST" action="/tweets/">
         <label for="tweet-text">What are you humming about?</label>
         <textarea name="text" id="tweet-text"></textarea>
         <div class='bottomRow'>
-          <button type="submit">Tweet</button>
-          <output class="counter" name="counter" for="tweet-text">140</output>
+          <button id='newTweetFormSubmit' type="submit">Tweet</button>
+          <output class="counter" name="counter" for="tweet-ttaotnaotnaotnaotn aonraonf naofnao
+
+          ext">140</output>
         </div>
       </form>
     </section>
     <!-- End of New Tweet Box -->
 
     <!-- Old Tweet Area -->
-    <section id='#tweets-container'>
-      <article class="oldTweets">
-        <header>
-          <div class='user'>
-            <div class='userPicandUsername'>
-              <img class='tweetProfile' src="/images/profile-hex.png">
-              <p>Test User</p>
-            </div>
-            <div class='userEmailHandle'>
-              <p>@TestUser</p>
-            </div>
-          </div>
-        </header>
-        <p class='oldTweetText'>Lorem ipsum dolor sit amet, consectetur   adipiscing elit. Nullam vitae   est   eu mi cursus condimentum. Cras  laoreet dui eros, at dictum tellus.</p>
-        <footer class="oldTweetsFooter">
-          <p class='ageOfTweet'>10 days ago</p>
-          <div class="iconContainer">
-            <i class="fas fa-flag"></i>
-            <i class="fas fa-retweet"></i>
-            <i class="fas fa-heart"></i>
-          </div>
-        </footer>
-      </article>
+    <section id='tweets-container'>
     </section>
     <!-- End Old Tweet Area -->
   
   <script type="text/javascript" src="scripts\composer-char-counter.js"></script>
   <script type="text/javascript" src="scripts\tweet-time-ago.js"></script>
+  <script type="text/javascript" src="scripts\client.js"></script>
 
   </body>
 </html>

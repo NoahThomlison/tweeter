@@ -54,7 +54,6 @@ const createTweetElement = (tweetData) => {
     </footer>
   </article>`
 
-  console.log(htmlTweetMarkup)
   return htmlTweetMarkup
 }
 
@@ -66,3 +65,22 @@ const renderTweets = (tweets) => {
 }
 
 renderTweets(tweetData);
+
+$("#newTweetForm").submit(function(event) {
+  const formInfo = $(this).serialize()
+  event.preventDefault();
+
+  console.log(formInfo)
+  console.log('updated')
+
+  $.ajax("/tweets", { method: 'post', data: formInfo});
+
+
+
+
+  // $.post( "/", formInfo);
+  // $.post( "/tweets", formInfo);
+  // $.post( "../../server/routes/tweets.js", formInfo);
+  // $.post( "../../server/index.js", formInfo);
+});  
+
