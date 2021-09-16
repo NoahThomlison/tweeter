@@ -17,11 +17,9 @@ $(document).ready(function() {
 
     //if the tweetLenght is greater than the predefined limit then find the parent item of 'this' and then find the 'output' of that parent and change its .css
     if(tweetLength >  maxTweetLength){
-      console.log('red')
       $(this).parent().find('.bottomRow').find('.counter').css("color", "red")
     }
     else{
-      console.log('black')
       $(this).parent().find('.bottomRow').find('.counter').css("color", "dark grey")
     }
   })

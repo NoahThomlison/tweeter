@@ -39,6 +39,18 @@ const renderTweets = (tweets) => {
   });
 }
 
+const renderNewTweet = () => {
+  $.get("/tweets", function(data, status){
+    //get latest element in data array of tweets
+    let newTweetData = createTweetElement(data[data.length-1])
+
+    //prepend new tweet and clear form
+    $('#tweets-container').prepend(newTweetData)
+    $('#tweet-text').val('')
+  })
+}
+
+
 const loadTweets = () => {
   $.get("/tweets", function(data, status){
     renderTweets(data);
@@ -50,7 +62,6 @@ $("#newTweetForm").submit(function(event) {
   event.preventDefault();
 
   if(formInfo.slice(5) === "") {
-    console.log('ding')
     alert("Your tweet is empty");
     return
   }
@@ -58,7 +69,11 @@ $("#newTweetForm").submit(function(event) {
     alert("Your tweet is too long");
     return
   }
+
+  //send data from form to the server
   $.ajax("/tweets", { method: 'post', data: formInfo});
+
+  renderNewTweet()
 });  
 
 loadTweets()
