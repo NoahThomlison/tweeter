@@ -30,8 +30,21 @@ form {
   outline: none;
 }
 
-label {
+.hidden{
+  display: none;
 }
+
+.errorBox{
+  border: red dotted 5px;
+  background-color: rgb(247, 115, 115);
+  width: 90%;
+}
+
+.errorMessage{
+  display: flex;
+  justify-content: center;
+}
+
 
 textarea{
   border-bottom: solid black 2px;

@@ -18,7 +18,7 @@ const createTweetElement = (tweetData) => {
         </div>
       </div>
     </header>
-    <p class='oldTweetText'>${tweetData.content.text}</p>
+    <p class='oldTweetText'>${escape(tweetData.content.text)}</p>
     <footer class="oldTweetsFooter">
       <p class='ageOfTweet'>${tweetData.created_at}</p>
       <div class="iconContainer">
@@ -40,6 +40,7 @@ const renderTweets = (tweets) => {
 }
 
 const renderNewTweet = () => {
+
   $.get("/tweets", function(data, status){
     //get latest element in data array of tweets
     let newTweetData = createTweetElement(data[data.length-1])
@@ -50,7 +51,6 @@ const renderNewTweet = () => {
   })
 }
 
-
 const loadTweets = () => {
   $.get("/tweets", function(data, status){
     renderTweets(data);
@@ -58,23 +58,30 @@ const loadTweets = () => {
 }
 
 $("#newTweetForm").submit(function(event) {
-  const formInfo = $(this).serialize()
+  const formInfo = $('#tweet-text').serialize()
   event.preventDefault();
 
   if(formInfo.slice(5) === "") {
-    alert("Your tweet is empty");
-    return
-  }
-  else if(($('.counter').val() <= 0)){
-    alert("Your tweet is too long");
+    $('.errorMessage').html('Your tweet is empty')
+    $('.errorBox').slideDown(500)
+    return} else if
+    (($('.counter').val() <= 0)){
+    $('.errorMessage').html('Your tweet is too long')
+    $('.errorBox').slideDown(500)
     return
   }
 
   //send data from form to the server
   $.ajax("/tweets", { method: 'post', data: formInfo});
-
+  $('.errorMessage').html('')
+  $('.errorBox').slideUp()
   renderNewTweet()
 });  
 
 loadTweets()
 
+const escape = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};

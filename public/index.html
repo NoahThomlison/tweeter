@@ -63,15 +63,17 @@
 
     <!-- New Tweet Box -->
     <section class="new-tweet">
+      <div class="hidden errorBox">
+        <h4 class='errorMessage'></h4>
+      </div>
+
       <h2>Compose Tweet</h2>
-      <!-- <form method="POST" action="/tweets/"> -->
       <form id='newTweetForm' method="POST" action="/tweets/">
         <label for="tweet-text">What are you humming about?</label>
         <textarea name="text" id="tweet-text"></textarea>
         <div class='bottomRow'>
           <button id='newTweetFormSubmit' type="submit">Tweet</button>
           <output class="counter" name="counter" for="tweet-ttaotnaotnaotnaotn aonraonf naofnao
-
           ext">140</output>
         </div>
       </form>
