@@ -19,4 +19,24 @@ nav {
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
+  height: 75%;
+  justify-content: space-evenly;
+}
+
+.hover{
+  color:  #6dffbb;
+  transition: .2s ease;
+  transform: scale(1.5);
+}
+
+.nohover{
+  color:  white;
+  transition: .2s ease;
+  transform: scale(1);
+}
+
+.logo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }

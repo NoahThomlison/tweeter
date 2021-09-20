@@ -8,7 +8,7 @@ button {
 .new-tweet{
   background-color: rgb(175, 203, 255);
   margin: auto;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
