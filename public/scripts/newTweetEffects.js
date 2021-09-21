@@ -5,15 +5,12 @@
  */
 
 $('.arrow').on('click', function (){
-  $(".new-tweet").slideDown(500).then($(".new-tweet").css('display', 'flex'))
+  $(".new-tweet").slideDown(500).css('display', 'flex')
 })
 
 $('.arrow').on('mouseenter', function (){
   $(".arrow").removeClass('nohover')
   $(".arrow").addClass('hover')
-  // $(".arrow").css('background-color', 'blue')
-
-  // alert('ding')
 })
 
 $('.arrow').on('mouseout', function (){
@@ -21,10 +18,3 @@ $('.arrow').on('mouseout', function (){
   $(".arrow").addClass('nohover')
 
 })
-
-// $('.arrow').on('mouseleave', function (){
-//   $(".arrow").css('color', 'white', 'width', '100%', 'height', '100%')
-// })
-
-
-

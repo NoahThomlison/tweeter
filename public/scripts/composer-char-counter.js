@@ -1,5 +1,5 @@
 /*
- * Client-side JS logic goes here
+ * Character count functionality here
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */

@@ -1,5 +1,5 @@
 /*
- * Client-side JS logic goes here
+ * Time ago functionality here
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
