@@ -44,8 +44,11 @@ $(document).ready(function() {
       //get latest element in data array of tweets
       let newTweetData = createTweetElement(data[data.length-1])
 
+      console.log(this)
       //prepend new tweet and clear form
-      $('#tweets-container').prepend(newTweetData)
+      // $('#tweets-container').prepend(newTweetData)
+            $('.new-tweet').after(newTweetData)
+
       $('#tweet-text').val('')
     })
   }

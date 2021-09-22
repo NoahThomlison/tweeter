@@ -9,3 +9,11 @@
   background-color: rgb(175, 203, 255);
   background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
 }
+
+@media only screen and (min-width: 1024px){
+  .topHeader{
+    width: 50%;
+    position: sticky;
+    top: 130px;
+  }
+}

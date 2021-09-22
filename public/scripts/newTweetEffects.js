@@ -16,5 +16,4 @@ $('.arrow').on('mouseenter', function (){
 $('.arrow').on('mouseout', function (){
   $(".arrow").removeClass('hover')
   $(".arrow").addClass('nohover')
-
 })

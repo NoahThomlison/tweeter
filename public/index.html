@@ -43,7 +43,9 @@
       </div>  
     </nav>
 
-    <!-- Top header -->
+    <!-- Page-specific (main) content here -->
+    <main class="container">
+          <!-- Top header -->
     <header class='topHeader'>
       <div>
           <img src="/images/profile-hex.png"> 
@@ -53,42 +55,39 @@
           <h2>Noah Thomlison</h2>
       </div>
     </header>
+    
+    <!-- Tweet Area -->
+    <section id='tweets-container'>
+      <!-- New Tweet Box -->
+        <div class="new-tweet">
+          <div class="hidden errorBox">
+            <h4 class='errorMessage'></h4>
+          </div>
 
+          <h2>Compose Tweet</h2>
+          <form id='newTweetForm' method="POST" action="/tweets/">
+            <label for="tweet-text">What are you humming about?</label>
+            <textarea name="text" id="tweet-text"></textarea>
+            <div class='bottomRow'>
+              <button id='newTweetFormSubmit' type="submit">Tweet</button>
+              <output class="counter" name="counter"    for="tweet-ttaotnaotnaotnaotn aonraonf naofnao
+              ext">140</output>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- End of New Tweet Box -->
 
-    <!-- Page-specific (main) content here -->
-    <main class="container">
+    </section>
+    <!-- End Tweet Area -->
+
+      <!-- Scroll Up Button Area -->
+      <section id='scrollButton'>
+        <i class="fas fa-arrow-up"></i>
+      </section>
+      <!-- Scroll Up Button Area -->
     </main>
 
-    <!-- New Tweet Box -->
-    <section class="new-tweet">
-      <div class="hidden errorBox">
-        <h4 class='errorMessage'></h4>
-      </div>
-
-      <h2>Compose Tweet</h2>
-      <form id='newTweetForm' method="POST" action="/tweets/">
-        <label for="tweet-text">What are you humming about?</label>
-        <textarea name="text" id="tweet-text"></textarea>
-        <div class='bottomRow'>
-          <button id='newTweetFormSubmit' type="submit">Tweet</button>
-          <output class="counter" name="counter" for="tweet-ttaotnaotnaotnaotn aonraonf naofnao
-          ext">140</output>
-        </div>
-      </form>
-    </section>
-    <!-- End of New Tweet Box -->
-
-    <!-- Old Tweet Area -->
-    <section id='tweets-container'>
-    </section>
-    <!-- End Old Tweet Area -->
-
-    <!-- Scroll Up Button Area -->
-    <section id='scrollButton'>
-      <i class="fas fa-arrow-up"></i>
-    </section>
-    <!-- Scroll Up Button Area -->
-  
   <script type="text/javascript" src="scripts\composer-char-counter.js"></script>
   <script type="text/javascript" src="scripts\tweet-time-ago.js"></script>
   <script type="text/javascript" src="scripts\client.js"></script>

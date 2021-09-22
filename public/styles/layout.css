@@ -30,11 +30,17 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
  main {
-  width: 90%;
   background-color: #f4f1ec;
   display: flex;
   flex-direction: column;
   margin: auto;
   justify-content: center;
   align-items: center;
+ }
+
+ @media only screen and (min-width: 1024px){
+   main{
+     flex-direction: row;
+     align-items: flex-start; 
+   }
  }
