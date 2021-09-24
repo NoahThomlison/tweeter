@@ -1,5 +1,15 @@
 @use "variables";
 
+nav{
+  display: flex;
+  align-items: center;
+
+  .nav_stacked{
+    display: flex;
+    align-items: center;
+  }
+}
+
 nav {
   height: 120px;
   width: 100%;
@@ -7,38 +17,26 @@ nav {
   color: variables.$text-color;
   padding-left: 1.5em;
   padding-right: 1.5em;
-  display: flex;
-  flex-direction: row;
-  align-content: center;
   justify-content: space-between;
-  flex-wrap: wrap;
   position: sticky;
   top: 0;
 }
 
 .nav_stacked {
-  display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  align-items: center;
   height: 75%;
   justify-content: space-evenly;
 }
 
 .hover{
-  color:  #6dffbb;
+  color: variables.$highlight-color;
   transition: .2s ease;
   transform: scale(1.5);
 }
 
 .nohover{
-  color:  white;
+  color:  variables.$no-highlight-color;
   transition: .2s ease;
   transform: scale(1);
-}
-
-.logo{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
