@@ -5,7 +5,6 @@
  */
 
 $(document).ready(function() {
-  // --- our code goes here ---
   $('#tweet-text').bind("input", function()  {
     let tweetLength = (this.value).length;
     const maxTweetLength = 140

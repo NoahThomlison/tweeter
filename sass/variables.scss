@@ -1,26 +1,16 @@
-/*
- * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
- * https://css-tricks.com/international-box-sizing-awareness-day/
- * Do not modify these two selectors, please
- */
+//Varialbes to be used for colors and fonts
 
-  //colors
-  $main-color: #4056A1;
-  $accent-color-1: #afcbff;
+//colors
+$main-color: #4056A1;
+$accent-color-1: #afcbff;
+$highlight-color: #6dffbb;
+$no-highlight-color: white;
+$border-color: #545149;
+$background-color: white;
+$text-color: white;
+$some-nav-color: #ffff;
+$error-color: #f77373;
 
-  $highlight-color: #6dffbb;
-  $no-highlight-color: white;
-
-  $border-color: #545149;
-
-  $background-color: white;
-
-  $text-color: white;
-
-  $some-nav-color: #ffff;
-  $error-color: #f77373;
-
-  //fonts
-  $main-font: "Source Sans Pro", sans-serif; 
-  $logo-font: "Bungee", sans-serif;
-  
+//fonts
+$main-font: "Source Sans Pro", sans-serif; 
+$logo-font: "Bungee", sans-serif;

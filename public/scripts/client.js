@@ -5,6 +5,8 @@
  */
 
 $(document).ready(function() {
+
+  //function which creates the html markup
   const createTweetElement = (tweetData) => {
     const htmlTweetMarkup = `
     <article class="oldTweets">
@@ -32,6 +34,7 @@ $(document).ready(function() {
     return htmlTweetMarkup
   }
 
+  //function which renders inital tweets from the database
   const renderTweets = (tweets) => {
     tweets.forEach(tweet => {
       tweet.created_at = timeAgo(tweet)
@@ -40,6 +43,7 @@ $(document).ready(function() {
     });
   }
 
+  //function which creates new tweets
   const renderNewTweet = () => {
     $.get("/tweets", function(data, status){
       //get latest element in data array of tweets
@@ -47,18 +51,20 @@ $(document).ready(function() {
       newTweetData.created_at = timeAgo(newTweetData)
       let newTweet = createTweetElement(newTweetData)
 
-      //prepend new tweet and clear form
+      //add new tweet and clear form
       $('.new-tweet').after(newTweet)
       $('#tweet-text').val('')
     })
   }
 
+  //function which loads the tweets from the server
   const loadTweets = () => {
     $.get("/tweets", function(data, status){
       renderTweets(data);
     })
   }
 
+  //function which catches user input on the form, posts form, and catches errors for empty or too long tweets
   $("#newTweetForm").submit(function(event) {
     const formInfo = $('#tweet-text').serialize()
     event.preventDefault();
@@ -80,16 +86,19 @@ $(document).ready(function() {
     renderNewTweet()
   });  
 
-  loadTweets()
-
+  //function which ensures no escape characters are inputted
   const escape = function (str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
-})
 
-const timeAgo = (tweet) => {
-  let createdTime = (timeago.format(tweet.created_at))
-  return(createdTime)
-}
+  //function which shows how long ago a tweet was made
+  const timeAgo = (tweet) => {
+    let createdTime = (timeago.format(tweet.created_at))
+    return(createdTime)
+  }
+
+  loadTweets()
+
+})
