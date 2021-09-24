@@ -3,16 +3,13 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
-/*
- * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
- * https://css-tricks.com/international-box-sizing-awareness-day/
- * Do not modify these two selectors, please
- */
+
+@use "variables";
+
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
-
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -20,8 +17,9 @@ html {
 /*
  * Global layout stuff
  */
+
 body {
-  background-color: white;
+  background-color: variables.$background-color;
   font-size: 24px;
   font-family: "Source Sans Pro", sans-serif;
 }
@@ -33,18 +31,18 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
-main {
-  background-color: white;
+ main {
+  background-color: variables.$background-color;
   display: flex;
   flex-direction: column;
   margin: auto;
   justify-content: center;
   align-items: center;
-}
+ }
 
-@media only screen and (min-width: 1024px) {
-  main {
-    flex-direction: row;
-    align-items: flex-start;
-  }
-}
+ @media only screen and (min-width: 1024px){
+   main{
+     flex-direction: row;
+     align-items: flex-start; 
+   }
+ }

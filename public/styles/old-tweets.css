@@ -1,42 +1,47 @@
-.oldTweets{
+/*
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * https://css-tricks.com/international-box-sizing-awareness-day/
+ * Do not modify these two selectors, please
+ */
+.oldTweets {
   margin: 10px;
   border: #545149 solid 5px;
   padding: 25px;
 }
 
-.oldTweets:hover{
+.oldTweets:hover {
   box-shadow: 5px 5px;
 }
 
-.oldTweetText{
+.oldTweetText {
   border-bottom: #545149 solid 5px;
 }
 
-.oldTweetsFooter{
+.oldTweetsFooter {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.tweetProfile{
+.tweetProfile {
   width: 50%;
   padding: 5px;
   width: 150px;
 }
 
-.user{
+.user {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 10px;
 }
 
-.userPicandUsername{
+.userPicandUsername {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#tweets-container{
+#tweets-container {
   width: 100%;
 }

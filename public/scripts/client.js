@@ -34,6 +34,7 @@ $(document).ready(function() {
 
   const renderTweets = (tweets) => {
     tweets.forEach(tweet => {
+      tweet.created_at = timeAgo(tweet)
       tweetToRender = createTweetElement(tweet)
       $('#tweets-container').append(tweetToRender);
     });
@@ -42,13 +43,12 @@ $(document).ready(function() {
   const renderNewTweet = () => {
     $.get("/tweets", function(data, status){
       //get latest element in data array of tweets
-      let newTweetData = createTweetElement(data[data.length-1])
+      let newTweetData = (data[data.length-1])
+      newTweetData.created_at = timeAgo(newTweetData)
+      let newTweet = createTweetElement(newTweetData)
 
-      console.log(this)
       //prepend new tweet and clear form
-      // $('#tweets-container').prepend(newTweetData)
-            $('.new-tweet').after(newTweetData)
-
+      $('.new-tweet').after(newTweet)
       $('#tweet-text').val('')
     })
   }
@@ -88,3 +88,8 @@ $(document).ready(function() {
     return div.innerHTML;
   };
 })
+
+const timeAgo = (tweet) => {
+  let createdTime = (timeago.format(tweet.created_at))
+  return(createdTime)
+}

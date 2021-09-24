@@ -1,8 +1,13 @@
+/*
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * https://css-tricks.com/international-box-sizing-awareness-day/
+ * Do not modify these two selectors, please
+ */
 nav {
   height: 120px;
   width: 100%;
   background-color: #4056A1;
-  color: #ffff;
+  color: white;
   padding-left: 1.5em;
   padding-right: 1.5em;
   display: flex;
@@ -23,19 +28,19 @@ nav {
   justify-content: space-evenly;
 }
 
-.hover{
-  color:  #6dffbb;
-  transition: .2s ease;
+.hover {
+  color: #6dffbb;
+  transition: 0.2s ease;
   transform: scale(1.5);
 }
 
-.nohover{
-  color:  white;
-  transition: .2s ease;
+.nohover {
+  color: white;
+  transition: 0.2s ease;
   transform: scale(1);
 }
 
-.logo{
+.logo {
   display: flex;
   flex-direction: column;
   justify-content: center;

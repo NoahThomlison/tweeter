@@ -1,3 +1,8 @@
+/*
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * https://css-tricks.com/international-box-sizing-awareness-day/
+ * Do not modify these two selectors, please
+ */
 .topHeader {
   height: 400px;
   width: 100%;
@@ -6,12 +11,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(175, 203, 255);
+  background-color: #afcbff;
   background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
 }
 
-@media only screen and (min-width: 1024px){
-  .topHeader{
+@media only screen and (min-width: 1024px) {
+  .topHeader {
     width: 50%;
     position: sticky;
     top: 130px;

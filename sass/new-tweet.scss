@@ -1,0 +1,76 @@
+@use "variables";
+
+button {
+  font-family: "Bungee", sans-serif;
+  background-color: variables.$main-color;
+  color: variables.$text-color;
+}
+
+.new-tweet{
+  background-color: variables.$accent-color-1;
+  margin: auto;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+#tweet-text {
+  background-color: variables.$accent-color-1;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  margin-bottom: .5em;
+  outline: none;
+}
+
+.hidden{
+  display: none;
+}
+
+.errorBox{
+  border: red dotted 5px;
+  background-color: variables.$error-color;
+  width: 90%;
+}
+
+.errorMessage{
+  display: flex;
+  justify-content: center;
+}
+
+textarea{
+  border-bottom: solid variables.$border-color 2px;
+}
+
+.bottomRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: .5em;
+}
+
+.counter{
+  font-family: "Bungee", sans-serif;
+}
+
+@media only screen and (min-width: 1024px){
+  .new-tweet{
+    border-bottom: variables.$main-color
+    solid 5px;
+    border-left: variables.$main-color
+    solid 5px;
+    border-right: variables.$main-color
+    solid 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+}

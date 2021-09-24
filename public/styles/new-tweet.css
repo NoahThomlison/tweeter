@@ -1,17 +1,21 @@
+/*
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * https://css-tricks.com/international-box-sizing-awareness-day/
+ * Do not modify these two selectors, please
+ */
 button {
   font-family: "Bungee", sans-serif;
   background-color: #4056A1;
-  color: #ffff;
+  color: white;
 }
 
-.new-tweet{
-  background-color: rgb(175, 203, 255);
+.new-tweet {
+  background-color: #afcbff;
   margin: auto;
   display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
 }
 
 form {
@@ -22,49 +26,51 @@ form {
 }
 
 #tweet-text {
-  background-color: rgb(175, 203, 255, 95);
+  background-color: #afcbff;
   border-top-style: hidden;
   border-right-style: hidden;
   border-left-style: hidden;
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
   outline: none;
 }
 
-.hidden{
+.hidden {
   display: none;
 }
 
-.errorBox{
+.errorBox {
   border: red dotted 5px;
-  background-color: rgb(247, 115, 115);
+  background-color: #f77373;
   width: 90%;
 }
 
-.errorMessage{
+.errorMessage {
   display: flex;
   justify-content: center;
 }
 
-textarea{
-  border-bottom: solid black 2px;
+textarea {
+  border-bottom: solid #545149 2px;
 }
 
 .bottomRow {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
 }
 
-.counter{
+.counter {
   font-family: "Bungee", sans-serif;
 }
 
-@media only screen and (min-width: 1024px){
-  .new-tweet{
-    width: 97%;
+@media only screen and (min-width: 1024px) {
+  .new-tweet {
     border-bottom: #4056A1 solid 5px;
     border-left: #4056A1 solid 5px;
     border-right: #4056A1 solid 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
   }
 }

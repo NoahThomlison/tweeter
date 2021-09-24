@@ -1,0 +1,45 @@
+@use "variables";
+
+.oldTweets{
+  margin: 10px;
+  border: variables.$border-color solid 5px;
+
+  padding: 25px;
+}
+
+.oldTweets:hover{
+  box-shadow: 5px 5px;
+}
+
+.oldTweetText{
+  border-bottom: variables.$border-color solid 5px;
+}
+
+.oldTweetsFooter{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tweetProfile{
+  width: 50%;
+  padding: 5px;
+  width: 150px;
+}
+
+.user{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.userPicandUsername{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#tweets-container{
+  width: 100%;
+}

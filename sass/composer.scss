@@ -1,0 +1,20 @@
+@use "variables";
+
+#scrollButton {
+  display: none; 
+  position: fixed; 
+  bottom: 50px; 
+  right: 50px; 
+  z-index: 5; 
+  padding: 15px; 
+  border-radius: 100%; 
+  font-size: 18px; 
+  background-color: variables.$main-color;
+  color: variables.$text-color;
+  transition: transform, ease, .25s;
+}
+
+#scrollButton:hover{
+  transform: scale(1.2);
+  color: variables.$highlight-color; 
+}

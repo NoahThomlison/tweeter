@@ -1,17 +1,23 @@
+/*
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * https://css-tricks.com/international-box-sizing-awareness-day/
+ * Do not modify these two selectors, please
+ */
 #scrollButton {
-  display: none; 
-  position: fixed; 
-  bottom: 50px; 
-  right: 50px; 
-  z-index: 5; 
-  color: white; 
-  padding: 15px; 
-  border-radius: 100%; 
-  font-size: 18px; 
+  display: none;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  z-index: 5;
+  padding: 15px;
+  border-radius: 100%;
+  font-size: 18px;
   background-color: #4056A1;
-  transition: transform, ease, .25s;
+  color: white;
+  transition: transform, ease, 0.25s;
 }
 
-#scrollButton:hover{
-  transform: scale(1.2)
+#scrollButton:hover {
+  transform: scale(1.2);
+  color: #6dffbb;
 }
