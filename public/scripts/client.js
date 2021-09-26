@@ -45,8 +45,9 @@ $(document).ready(function() {
 
   //function which creates new tweets
   const renderNewTweet = () => {
-    $.get("/tweets", function(data, status){
-      //get latest element in data array of tweets
+
+    $.ajax('/tweets', { method: 'GET'})
+    .then(function (data) {
       let newTweetData = (data[data.length-1])
       newTweetData.created_at = timeAgo(newTweetData)
       let newTweet = createTweetElement(newTweetData)
@@ -54,7 +55,7 @@ $(document).ready(function() {
       //add new tweet and clear form
       $('.new-tweet').after(newTweet)
       $('#tweet-text').val('')
-    })
+    });
   }
 
   //function which loads the tweets from the server
