@@ -49,8 +49,6 @@ $(document).ready(function() {
     $.ajax('/tweets', { method: 'GET'})
     .then(function (data) {
       let newTweetData = (data[data.length-1])
-      console.log(data)
-      console.log(newTweetData)
       newTweetData.created_at = timeAgo(newTweetData)
       let newTweet = createTweetElement(newTweetData)
 
