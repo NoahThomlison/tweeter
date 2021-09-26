@@ -49,6 +49,8 @@ $(document).ready(function() {
     $.ajax('/tweets', { method: 'GET'})
     .then(function (data) {
       let newTweetData = (data[data.length-1])
+      console.log(data)
+      console.log(newTweetData)
       newTweetData.created_at = timeAgo(newTweetData)
       let newTweet = createTweetElement(newTweetData)
 
@@ -82,10 +84,11 @@ $(document).ready(function() {
     }
 
     //send data from form to the server
-    $.ajax("/tweets", { method: 'post', data: formInfo});
-    $('.errorMessage').html('')
-    $('.errorBox').slideUp()
-    renderNewTweet()
+    $.ajax("/tweets", { method: 'post', data: formInfo}).then(function(){
+      $('.errorMessage').html('')
+      $('.errorBox').slideUp()
+      renderNewTweet()
+    })
   });  
 
   //function which ensures no escape characters are inputted
