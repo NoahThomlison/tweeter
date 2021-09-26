@@ -39,7 +39,7 @@ $(document).ready(function() {
     tweets.forEach(tweet => {
       tweet.created_at = timeAgo(tweet)
       tweetToRender = createTweetElement(tweet)
-      $('#tweets-container').append(tweetToRender);
+      $('#tweets-container').prepend(tweetToRender);
     });
   }
 
