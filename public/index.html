@@ -65,17 +65,15 @@
           <div class="hidden errorBox">
             <h4 class='errorMessage'></h4>
           </div>
-
-            <h2>Compose Tweet</h2>
-            <form id='newTweetForm' method="POST" action="/tweets/">
-              <label for="tweet-text">What are you humming about?</label>
-              <textarea name="text" id="tweet-text"></textarea>
-              <div class='bottomRow'>
-                <button id='newTweetFormSubmit' type="submit">Tweet</button>
-                <output class="counter" name="counter"      for="tweet-ttaotnaotnaotnaotn aonraonf naofnao
-                ext">140</output>
-              </div>
-            </form>
+          <h2>Compose Tweet</h2>
+          <form id='newTweetForm' method="POST" action="/tweets/">
+            <label for="tweet-text">What are you humming about?</label>
+            <textarea name="text" id="tweet-text"></textarea>
+            <div class='bottomRow'>
+              <button id='newTweetFormSubmit' type="submit">Tweet</button>
+              <output class="counter" name="counter" for="tweet-text">140</output>
+            </div>
+          </form>
           </div>
         </div>
         <!-- End of New Tweet Box -->
@@ -88,12 +86,10 @@
       </section>
       <!-- Scroll Up Button Area -->
     </main>
-
   <script type="text/javascript" src="scripts\composer-char-counter.js"></script>
   <script type="text/javascript" src="scripts\client.js"></script>
   <script type="text/javascript" src="scripts\newTweetEffects.js"></script>
   <script type="text/javascript" src="scripts\composer.js"></script>
-
   </body>
 </html>
 

@@ -39,7 +39,7 @@ $(document).ready(function() {
     tweets.forEach(tweet => {
       tweet.created_at = timeAgo(tweet)
       tweetToRender = createTweetElement(tweet)
-      $('#tweets-container').prepend(tweetToRender);
+      $('.new-tweet').after(tweetToRender);
     });
   }
 
@@ -55,6 +55,7 @@ $(document).ready(function() {
       //add new tweet and clear form
       $('.new-tweet').after(newTweet)
       $('#tweet-text').val('')
+      $('.counter').val('140')
     });
   }
 

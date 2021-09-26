@@ -18,8 +18,8 @@ $(document).ready(function() {
     if(tweetLength >  maxTweetLength){
       $(this).parent().find('.bottomRow').find('.counter').css("color", "red")
     }
-    else{
-      $(this).parent().find('.bottomRow').find('.counter').css("color", "dark grey")
+    else if (tweetLength <  maxTweetLength){
+      $(this).parent().find('.bottomRow').find('.counter').css("color", "#4056A1")
     }
   })
 });
