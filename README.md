@@ -3,10 +3,10 @@ Tweeter is a simple, single-page Twitter clone. It uses HTML, CSS, JS, jQuery an
 
 The App is both web and mobile friendly.
 
-# Web Version
+## Web Version
 ![AnimationDesktop](https://user-images.githubusercontent.com/80222250/157595393-7c51d08e-bd96-4151-b718-0920cd30c165.gif)
 
-# Mobile Version
+## Mobile Version
 ![AnimationMobile](https://user-images.githubusercontent.com/80222250/157595399-f459a39e-9f26-4436-9ef8-6b716aea1fa1.gif)
 
 ## Getting Started
