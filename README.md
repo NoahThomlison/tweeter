@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Tweeter Project
 Tweeter is a simple, single-page Twitter clone. It uses HTML, CSS, JS, jQuery and Ajax front-end with a Node, Expres and MongoDB back-end. Users can tweet their thoughts, which are added to the list of tweets in order. Tweets cannot be added if they are over 140 chacaters long. 
 
